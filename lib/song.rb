@@ -32,7 +32,7 @@ class Song
     @@genres.collect do |genre|
       genre
     binding.pry 
-    
+  end 
   end 
   
 end
