@@ -8,6 +8,16 @@ class Song
   @name 
   @artist
   
+  
+  def initialize(name, artist, genre)
+    @name = name 
+    @artist = artist
+    @genre = genre
+    @@count += 1 
+    @@artists << artist 
+    @@genres << genre 
+  end 
+  
   def self.count
     @@count
   end 
@@ -24,15 +34,6 @@ class Song
     @@genres.map.with_index do |genre|
       hash = {"#{genre}" => @@count}
     end
-  end 
-  
-  def initialize(name, artist, genre)
-    @name = name 
-    @artist = artist
-    @genre = genre
-    @@count += 1 
-    @@artists << artist 
-    @@genres << genre 
   end 
   
   def self.genre_count
